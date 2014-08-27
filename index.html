@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BLUFF | FACT</title>
+		<link rel="stylesheet" href="themes/CAP.min.css" />
+		<link rel="stylesheet" href="themes/1.css" />
+		<script src="themes/1.js"></script>
+		<script src="themes/2.js"></script>
+		<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
+		<script src="js/jquery.js"></script>
+		
+	    
+
+
+
+
+		
+		
+		
+		<script>
+
+	
+	
+	
+	function login(){
+var pw = window.localStorage.getItem("password");
+var a = "";
+if(pw==a){
+$("#regpicture").show();
+}
+else{
+$("#regpicture").hide();
+$("#regpicture").slideUp();
+}
+
+	var u = window.localStorage.getItem("username");
+	var p = window.localStorage.getItem("password");
+	var user = document.getElementById('logusername').value; 
+	var pass = document.getElementById('logpassword').value;
+	
+	if(u==user && p==pass){
+		window.open('index.html#successfully');
+	}
+	else{
+	window.location.reload();
+	alert('Wrong Username or Password!');
+
+	}
+	
+	
+	}
+		
+		
+		function reg(){
+		var con =  document.getElementById('conf').value;
+		var user = document.getElementById('username').value;
+		var name  = document.getElementById('name').value;
+		var add  = document.getElementById('address').value;
+		var pass  = document.getElementById('password').value;
+	
+
+		if(con==pass){
+		window.localStorage.setItem("username", user);
+		window.localStorage.setItem("name", name);
+		window.localStorage.setItem("address", add);
+		window.localStorage.setItem("password", pass);
+		window.open('index.html');
+		}
+		else{
+		
+		alert('Password does not match!');
+		
+		}
+		}
+		
+		
+	
+		</script>
+<style>	
+	.hello {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}
+	
+	#nameuser {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+
+}
+		
+	.namestyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}
+
+	.addressstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}
+
+	.passwordstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}
+
+	.confirmstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}	
+		.registerstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}	
+		.cancelstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}	
+				.userstyle {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 130%;
+	color: white;
+}
+</style>			
+		
+			
+</head>
+<body onLoad="load()">
+
+<div data-role="page" id="mainpage" class="content" style= "background: #000f39;">
+ <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
+ <img src="images/header.png" height="100%" width="80%" />
+ </div>
+<div data-role="content" align="center" >
+
+
+ <img src="images/masthmaster.png" height="40%" width="70%" />
+
+<a href="#login" target="_blank" ><img src="images/START.png"   height="20%" width="80%"></a>
+<a href="#register" target="_blank" ><img src="images/HELP.png" id="regpicture"   height="20%" width="80%" ></a>
+</div>
+</div>
+
+
+
+<div data-role="page" id="register" class="content" style= "background: #000f39;">
+ <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
+ <img src="images/header.png" height="100%" width="80%" />
+ </div>
+<div data-role="content"  >
+<form >
+<label class="userstyle">USER</label>
+<input type="text" name = "username" id="username" placeholder="USERNAME" style="text-transform: uppercase"   required />
+<label class="namestyle">NAME</label>
+<input type="text" name = "name" id="name"  placeholder="LN, FN, MI" style="text-transform: uppercase"   required />
+<label class="addressstyle"  >ADDRESS</label>
+<input type="text" name="address" id="address" placeholder="CITY , COUNTRY" style="text-transform: uppercase"   required  />
+<label class="passwordstyle" >PASSWORD</label>	 
+<input type="password" name = "password" id="password" placeholder="PASSWORD"  style="text-transform: uppercase"   required />
+<label class="confirmstyle">CONFIRM PASSWORD</label>
+<input type="password" name="confirm" id="conf" placeholder="CONFIRM PASSOWRD" style="text-transform: uppercase"   required />
+
+<br />
+<br />
+<input type = "submit" data-theme="a" name = "submit" onClick="reg()" value = "REGISTER"/>
+<a href="#mainpage" class="cancelstyle"  data-theme="a"  data-role="button" data-icon="back">CANCEL</a>
+</form>
+</div>	
+</div>
+
+
+
+<div data-role="page" id="login" class="content" style= "background: #000f39;">
+ <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
+   <img src="images/header.png" height="100%" width="80%" />
+ </div>
+<div data-role="content"  >
+<form   >
+<label class="userstyle" >USERNAME:</label>
+<input type = "text" name = "username" id="logusername" maxlength = "30" style="text-transform: uppercase"   required />
+<label class="passwordstyle">PASSWORD:</label>
+<input type = "password" name = "password" id="logpassword" maxlength = "30"  style="text-transform: uppercase"   required />
+<CENTER>
+<a  target="_blank"   ><img src="images/ok.png"  onClick="login()"  height="20%" width="80%" ></a>
+<a  href="#mainpage"  target="_blank"><img src="images/cancel.png"    height="20%" width="80%" ></a>
+</CENTER>
+</form>
+</div>
+</div>
+
+
+<div data-role="page" id="successfully" class="content" style= "background: #000f39;">
+ <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
+  <img src="images/header.png" height="100%" width="80%" />
+ </div>
+<div data-role="content" align="center" >
+ <div > 
+ <label class="hello">Hi</label> 
+ <label id="nameuser" style="text-transform: uppercase"> </label>
+ 
+ </div> 
+<label class="hello">Enjoy the game!  and Share now your score to everyone</label>
+
+<table>
+<tr>
+<td>
+<a href="http://mathmaster.comoj.com/topscore.php" target="_blank" > <img src="images/topscore.png"  value="TOPSCORE" height="30%" width="100%" /></a><br />
+</td>
+<td>
+<a href="fafa.html" target="_blank" > <img src="images/sharescore.png"  value="TOPSCORE" height="30%" width="100%" /></a></br>
+</td>
+</tr>
+</table>
+<a href="#mathmaster" target="_blank" ><img src="images/play.png"  id="play" height="20%" width="75%"></a> <br />
+<a href="#register" target="_blank" ><img src="images/setting.png"  height="20%" width="75%"></a><br />
+<a href="#mainpage" target="_blank" ><img src="images/logout.png"    height="20%" width="75%"></a><br />
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div data-role="page" id="mathmaster" class="content" style= "background: #000f39;">
+ <div data-role="header" data-theme="a" align="center" data-position="fixed" style="height:10%;">
+
+<table id="tblscore">
+<tr>
+<td>
+<h2 class= "auto-style12" id="headscore">Score:</h2> 
+</td>
+<td>
+<h2 id="points" class="point" value="100"> </h2>
+</td>
+</tr>		
+</table>
+ 
+ 
+ </div>
+<progress id="myProgress" value="0" max="100" ></progress><br>
+<div data-role="content" align="center"  style="width=90% height=90% ">
+<h5 id="lblScore" class="lblScore"  > </h5>
+<h5 id="lblTotal" class="lblTotal"  > </h5>
+<table id="quest" style="width: 99%; height: 96%; " class="auto-style7">
+		<tr>
+		<h2> <td class="auto-style2" ><label id="ask" > </label></td> </h2>
+		</tr>
+		<tr>
+		<td class="auto-style1">
+		<form method="post" class="auto-style3">
+<table>
+<tr>
+<td>
+		<img src="images/FACT.png"  onClick="factClick()" width="70%" height="10%" id="fact" class="fact" alt="" />
+		
+</td>
+<td>
+		
+<img src="images/BLUFF.png"  onClick="bluffClick()" width="70%" height="10%" id="bluff" class="bluff" alt="" />
+</td>
+</tr>
+</table>
+		</form>
+		</td>
+		</tr>
+</table>
+<form  >
+			<div id="infoscore">
+			<label class="auto-style1">WHO WILL BE THE MATH MASTER?<label>
+			<input type="text" id="namenameuser" name="username"	 align="center"		style="text-transform: uppercase;"  disabled ></input>
+			<br />
+			<input  type="text" id="addressuser" name="address"  align="center"	  style="text-transform: uppercase;  align: center;"  disabled ></input>
+			<br />
+			<label>Your Score is: <label>
+			<label id="sc" name="score"  class="auto-style1"></label>
+			</div>
+			<a href="fafa.html" target="_blank" > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="20%" width="50%" /></a></br>
+		
+
+			<label  class="auto-style1" >Last Score:</label>	
+			<label id="sc1"  class="auto-style1"></label>
+			
+			<br />	
+			<table  align="center">
+			<tr>
+			<td  align="center">
+			<a href ="#successfully" >	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="25%" height="8%"  /></a>
+			</td>
+			<td  align="center">
+			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="35%" height="10%"   /></a>
+			</td>
+			</tr>
+			</table>
+</form>			
+</div>	
+			
+			
+</div>	
+
+</body>
+
+
+
+
+<style type="text/css">
+
+
+
+.auto-style2 {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 150%;
+	color: white;
+}
+
+
+.auto-style1 {
+	text-align: center;
+	font-family: "Century Gothic";
+	font-size: 100%;
+	color: white;
+}
+
+
+.auto-style12 {
+	font-family: "Century Gothic";
+	font-size: 100%;
+	color: white;
+
+
+}
+
+.point{
+
+	margin-left: 20px;
+
+	text-align: left;
+	font-family: "Century Gothic";
+	font-size: 150%;
+	color: white;
+	
+
+}
+
+
+
+
+
+
+
+
+#myProgress {
+	width: 100%;
+	height: 40px;
+	-webkit-appearance: none;
+	border: none;
+}
+
+/* All good till now. Now we'll style the background */
+#myProgress::-webkit-progress-bar {
+	background: orange;
+	border-radius: 50px;
+	padding: 2px;
+	box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Now the value part */
+#myProgress::-webkit-progress-value {
+	border-radius: 50px;
+	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	background:
+		  -webkit-linear-gradient(-45deg, 
+	                           transparent 33%, rgba(0, 0, 0, .1) 33%, 
+	                           rgba(0,0, 0, .1) 66%, transparent 66%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #09c, #f44);
+	
+	/* Looks great, now animating it */
+	background-size: 25px 14px, 100% 100%, 100% 100%;
+	-webkit-animation: move 5s linear 0 infinite;
+}
+
+/* That's it! Now let's try creating a new stripe pattern and animate it using animation and keyframes properties  */
+
+@-webkit-keyframes move {
+	0% {background-position: 0px 0px, 0 0, 0 0}
+	100% {background-position: -100px 0px, 0 0, 0 0}
+}
+
+</style>
+
+<script type="text/javascript" >
+var questnum = 1;
+var ans;
+var score = 0;
+var life = 0;
+
+function load(){
+
+
+document.getElementById ('bluff').hidden = true;
+document.getElementById ('fact').hidden = true;
+
+
+}
+
+function bluffClick(){
+
+if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	document.getElementById ("points").innerHTML = window.localStorage.getItem("bluffactScore"); 
+	}
+	
+	ans = document.getElementById ("bluff").value;
+	progress = $("#myProgress");
+	max = progress.attr("max");
+	var current = progress.attr("value");
+	current = 0;
+	
+	if(ans=="ee101"){score=score+1; progress.attr("value", current);}
+	else if(ans=="bb2"){score=score+1; progress.attr("value", current);}
+	else if(ans=="a101"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b101"){score=score+1; progress.attr("value", current);}
+	else if(ans=="ee3"){score=score+1; progress.attr("value", current);}
+	else if(ans=="a102"){score=score+1; progress.attr("value", current);}
+	else if(ans=="c102"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e102"){score=score+1; progress.attr("value", current);}
+	else if(ans=="a103"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e103"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b104"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e104"){score=score+1; progress.attr("value", current);}
+	else if(ans=="a105"){score=score+1; progress.attr("value", current);}
+	else if(ans=="c105"){score=score+1; progress.attr("value", current);}	
+	else if(ans=="a106"){score=score+1; progress.attr("value", current);}
+	else if(ans=="c106"){score=score+1; progress.attr("value", current);}	
+	else if(ans=="b107"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e107"){score=score+1; progress.attr("value", current);}		
+	else{
+	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
+		window.localStorage.setItem("bluffactScore", mySave);
+		window.localStorage.setItem("fafa", mySave);
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#bluff').fadeOut(300);
+	$('#fact').fadeOut(300);
+	$('#ask').fadeOut(300);
+	$('#headscore').fadeOut(300);
+	$('#points').fadeOut(300);
+	
+	$('#playagain').fadeIn(300);
+	$('#backtomenu').fadeIn(300);
+	$('#sharebtn').fadeIn(300);
+	$('#infoscore').fadeIn(300);
+	$('#shareshare').fadeIn(300);
+	document.getElementById ('playagain').src = "images/again.png";
+	document.getElementById ('backtomenu').src = "images/back.png";
+	
+
+var bluffact = parseInt(document.getElementById('lblScore').innerHTML = window.localStorage.getItem("totalScore"));
+var total1 = bluffact + mySave;
+var totalLocal = document.getElementById('lblTotal').innerHTML = total1 ;
+window.localStorage.setItem("totalScore", totalLocal);
+	
+	
+	
+ if (!sc1.value) {
+        sc1.value = window.localStorage.getItem('bluffactScore');
+      }  
+	 addEventListener('keyup', function () {
+        window.localStorage.setItem('bluffactScore', sc1.value);
+      }, false);
+
+	}
+
+	document.getElementById ("points").innerHTML = score ;
+	
+	if(questnum==1)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "4/2*9=17?";
+    	document.getElementById ("bluff").value = "a102";
+		document.getElementById ("fact").value = "aa102";
+
+    	questnum=2;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "9*4/2=6?";
+    	document.getElementById ("bluff").value = "b102";
+		document.getElementById ("fact").value = "bb102";
+
+    	questnum=2;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "2*4*9=74?";
+    	document.getElementById ("bluff").value = "c102";
+		document.getElementById ("fact").value = "cc102";
+    	questnum=2;
+		}
+		
+			else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "9*4/2=6.5?";
+    	document.getElementById ("bluff").value = "e102";
+		document.getElementById ("fact").value = "ee102";
+    	questnum=2;
+		}
+		
+		}
+		<!-- next 3 question here-->
+		else if(questnum==2)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "8*4/2=16?";
+    	document.getElementById ("bluff").value = "a104";
+		document.getElementById ("fact").value = "aa104";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "2*4/8=2?";
+    	document.getElementById ("bluff").value = "b104";
+		document.getElementById ("fact").value = "bb104";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "2*4*8=64?";
+    	document.getElementById ("bluff").value = "c104";
+		document.getElementById ("fact").value = "cc104";
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "8/4*2=6?";
+    	document.getElementById ("bluff").value = "e104";
+		document.getElementById ("fact").value = "ee104";
+    	questnum=3;
+		}
+		
+		}
+		
+				<!-- next 3 question here-->
+			else if(questnum==3)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "5*4-6=16?";
+    	document.getElementById ("bluff").value = "a106";
+		document.getElementById ("fact").value = "aa106";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "6*5-4=26?";
+    	document.getElementById ("bluff").value = "b106";
+		document.getElementById ("fact").value = "bb106";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "5-4*6=12?";
+    	document.getElementById ("bluff").value = "c106";
+		document.getElementById ("fact").value = "cc106";
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "5-4*6=12?";
+    	document.getElementById ("bluff").value = "e106";
+		document.getElementById ("fact").value = "ee106";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+}
+
+
+function factClick(){
+
+
+
+if (questnum==10)
+	{
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+
+	document.getElementById ("points").innerHTML = window.localStorage.getItem("bluffactScore" ); 
+	document.getElementById ('playagain').src = "images/again.png";
+	document.getElementById ('backtomenu').src = "images/back.png";
+	document.getElementById ('sharebtn').src = "images/playagain.png";
+	
+	}
+	
+	ans = document.getElementById ("fact").value;
+	progress = $("#myProgress");
+	max = progress.attr("max");
+	var current = progress.attr("value");
+	current = 0;
+	
+	
+	if(ans=="aa1"){score=score+1;  progress.attr("value", current);}
+	else if(ans=="cc3"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc101"){score=score+1; progress.attr("value", current);}
+	else if(ans=="bb102"){score=score+1; progress.attr("value", current);}
+	else if(ans=="bb103"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc103"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa104"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc104"){score=score+1; progress.attr("value", current);}
+	else if(ans=="bb105"){score=score+1; progress.attr("value", current);}
+	else if(ans=="c105"){score=score+1; progress.attr("value", current);}
+	else if(ans=="ee106"){score=score+1; progress.attr("value", current);}
+	else if(ans=="bb106"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa107"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc107"){score=score+1; progress.attr("value", current);}
+	else{
+	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
+		window.localStorage.setItem("bluffactScore", mySave);
+				window.localStorage.setItem("fafa", mySave);
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#bluff').fadeOut(300);
+	$('#fact').fadeOut(300);
+	$('#ask').fadeOut(300);
+	$('#headscore').fadeOut(300);
+	$('#points').fadeOut(300);
+	
+	$('#playagain').fadeIn(300);
+	$('#backtomenu').fadeIn(300);
+	$('#sharebtn').fadeIn(300);
+	$('#infoscore').fadeIn(300);
+	$('#shareshare').fadeIn(300);
+	document.getElementById ('playagain').src = "images/again.png";
+	document.getElementById ('backtomenu').src = "images/back.png";
+	document.getElementById ('infoscore').value;
+
+var bluffact = parseInt(document.getElementById('lblScore').innerHTML = window.localStorage.getItem("totalScore"));
+var total1 = bluffact + mySave;
+var totalLocal = document.getElementById('lblTotal').innerHTML = total1 ;
+window.localStorage.setItem("totalScore", totalLocal);
+	
+	
+	
+ if (!sc1.value) {
+        sc1.value = window.localStorage.getItem('bluffactScore');
+      }  
+	 addEventListener('keyup', function () {
+        window.localStorage.setItem('bluffactScore', sc1.value);
+      }, false);
+	}
+	document.getElementById ("points").innerHTML = score ;
+	
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+	
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "21+6+3=33?";
+    	document.getElementById ("bluff").value = "a101";
+		document.getElementById ("fact").value = "aa101";
+
+    	questnum=2;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "2-0+2=3?";
+    	document.getElementById ("bluff").value = "b101";
+		document.getElementById ("fact").value = "bb101";
+
+    	questnum=2;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "2+2-2=2?";
+    	document.getElementById ("bluff").value = "c101";
+		document.getElementById ("fact").value = "cc101";
+    	questnum=2;
+		}
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "2+2*0=4?";
+    	document.getElementById ("bluff").value = "ee101";
+		document.getElementById ("fact").value = "e101";
+    	questnum=2;
+		}
+		
+		
+				else if(questnum==2)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "9/3+9=11??";
+    	document.getElementById ("bluff").value = "a103";
+		document.getElementById ("fact").value = "aa103";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "9/9+3=4?";
+    	document.getElementById ("bluff").value = "b103";
+		document.getElementById ("fact").value = "bb103";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+9+3=21?";
+    	document.getElementById ("bluff").value = "c103";
+		document.getElementById ("fact").value = "cc103";
+    	questnum=3;
+		}
+		
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+9+3=21?";
+    	document.getElementById ("bluff").value = "e103";
+		document.getElementById ("fact").value = "ee103";
+    	questnum=3;
+		}
+		}
+		
+						else if(questnum==3)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+6+4=17?";
+    	document.getElementById ("bluff").value = "a105";
+		document.getElementById ("fact").value = "aa105";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "6-4+9=11?";
+    	document.getElementById ("bluff").value = "b105";
+		document.getElementById ("fact").value = "bb105";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "9-6+4=9?";
+    	document.getElementById ("bluff").value = "c105";
+		document.getElementById ("fact").value = "cc105";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "6-3*2=6?";
+    	document.getElementById ("bluff").value = "e105";
+		document.getElementById ("fact").value = "ee105";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+							else if(questnum==4)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+2*8=88?";
+    	document.getElementById ("bluff").value = "a107";
+		document.getElementById ("fact").value = "aa107";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+2+8=19?";
+    	document.getElementById ("bluff").value = "b107";
+		document.getElementById ("fact").value = "bb107";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "8*9+2=74?";
+    	document.getElementById ("bluff").value = "c107";
+		document.getElementById ("fact").value = "cc107";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "9-2+8=19?";
+    	document.getElementById ("bluff").value = "e107";
+		document.getElementById ("fact").value = "ee107";
+    	questnum=3;
+		}
+		}
+		
+		
+}
+
+
+
+
+function load()
+{
+
+
+
+
+var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("name");
+var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("name");
+var addressuser =  document.getElementById('addressuser').value = window.localStorage.getItem("address");
+
+	
+
+
+
+document.getElementById ('infoscore').hidden = true;	
+document.getElementById ('lblTotal').hidden = true;
+document.getElementById ('lblScore').hidden = true;
+document.getElementById ('shareshare').hidden = true;
+document.getElementById('points').innerHTML = score;
+document.getElementById('sc1').innerHTML = window.localStorage.getItem("bluffactScore");
+
+	document.getElementById ('playagain').hidden = true;
+		document.getElementById ('backtomenu').hidden = true;
+	
+	var tobecondition =["q1","q2","q3","q4"];
+	var randomNum=Math.floor((Math.random()*4)+0);
+
+    	if (tobecondition[randomNum]=='q1')
+    	{
+	document.getElementById ("ask").innerHTML = "5-2*4=12?";
+		document.getElementById ("bluff").value = "a1";
+		document.getElementById ("fact").value = "aa1";
+    	
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+
+			document.getElementById ("bluff").value = "bb2";
+			document.getElementById ("fact").value = "b2";
+    	document.getElementById ("ask").innerHTML = "4*5-2=17?";
+    	}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+
+			document.getElementById ("bluff").value = "c3";
+			document.getElementById ("fact").value = "cc3";
+    	document.getElementById ("ask").innerHTML = "4-2*5=10?";
+    	}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+
+			document.getElementById ("bluff").value = "ee3";
+			document.getElementById ("fact").value = "e3";
+    	document.getElementById ("ask").innerHTML = "4-2*5=11?";
+    	}
+ 
+}
+
+var timer;
+var progress;
+var max;
+
+$(document).ready(function() {
+progress = $("#myProgress");
+max = progress.attr("max");
+timer = setInterval("updateBar()", 300);
+
+});
+
+function updateBar() {
+
+
+	var current = progress.attr("value");
+	current += 3;
+	progress.attr("value", current);
+
+	
+	
+	if (current >= max) {
+	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
+		window.localStorage.setItem("bluffactScore", mySave);
+				window.localStorage.setItem("fafa", mySave);
+	clearInterval(timer);
+	document.getElementById("myProgress").hidden=true;
+	$('#bluff').fadeOut(300);
+	$('#fact').fadeOut(300);
+	$('#ask').fadeOut(300);
+	$('#tblscore').fadeOut(300);
+		
+	$('#playagain').fadeIn(300);
+	$('#backtomenu').fadeIn(300);
+	$('#shareshare').fadeIn(300);
+	$('#infoscore').fadeIn(300);
+	document.getElementById ('playagain').src = "images/again.png";
+	document.getElementById ('backtomenu').src = "images/back.png";
+	document.getElementById ('infoscore').imnerHTML;	
+
+
+var totalLocal = document.getElementById('points').innerHTML;
+window.localStorage.setItem("totalScore", totalLocal);
+	
+	
+	
+ if (!sc1.value) {
+        sc1.value = window.localStorage.getItem('bluffactScore');
+      }  
+	 addEventListener('keyup', function () {
+        window.localStorage.setItem('bluffactScore', sc1.value);
+      }, false);
+
+
+	}
+	
+}
+
+$(document).ready(function(){
+$('#playagain').click(function() {
+    location.reload();
+});
+
+
+});
+
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

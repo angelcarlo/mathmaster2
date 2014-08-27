@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script> 
+		
+		function loadAjax(){
+		var xmlhttp;
+		if(window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
+		}else{
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function(){
+			if(xmlhttp.readyState==4 && xmlhttp.status==200){
+				document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","topscore.php", true);
+		xmlhttp.send();
+	}
+		
+	</script>
+
+</head>
+
+<body onLoad="loadAjax()">
+
+
+<div id="myDiv">Magic</div>
+
+</body>
+</html>

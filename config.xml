@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="mathmaster1234567"  version = "1.2.3" versionCode = "18" >
+
+
+        <name>Math Master</name>
+        <description>Math Quiz</description>
+        <author>doubleQuote</author>        
+		<gap:platforms>
+                <gap:platform name="ios" />
+                <gap:platform name="android" />
+                <gap:platform name="webos" />
+                <gap:platform name="symbian.wrt" />
+                <gap:platform name="blackberry" project="widgets"/>
+        </gap:platforms>
+
+        <icon src="icon.png" gap:role="default" />
+        <preference name="phonegap-version" value="3.3.0" />
+        
+        <access origin="*" subdomains="true" />
+        <access uri="*" subdomains="true" />
+         <access uri="http://mathmaster.comoj.com/topscore.php" subdomains="true" />
+        <feature name="http://api.phonegap.com/1.0/network"/>
+        <feature name="InAppBrowser">
+    <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
+        
+        
+        <preference name="orientation" value="portrait" />
+        <preference name="fullscreen" value="true" />
+        <preference name="target-device" value="universal" />
+
+	
+</widget>
