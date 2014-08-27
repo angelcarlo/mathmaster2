@@ -13,7 +13,47 @@
 		<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
 		<script src="js/jquery.js"></script>
 		
+	    
 <script>
+function changefact(){
+	setTimeout("changefact1('images/FACT1.png')", 750);
+	setTimeout("changefact1('images/FACT.png')", 1000);
+	
+	setTimeout("changefact2()", 750);
+}
+
+function changefact1(val){
+document.getElementById('fact').src = val;
+}
+
+function changefact2(){
+setTimeout("changefact()", 1000);
+}
+
+
+
+function changebluff(){
+	setTimeout("changebluff1('images/BLUFF.png')", 750);
+	setTimeout("changebluff1('images/BLUFF1.png')", 900);
+	
+	setTimeout("changebluff2()", 750);
+}
+
+function changebluff1(val){
+document.getElementById('bluff').src = val;
+}
+
+function changebluff2(){
+setTimeout("changebluff()", 900);
+}
+
+
+
+
+
+
+
+
 function changeeye(){
 	setTimeout("changeeye1('images/mathmaster1.png')", 750);
 	setTimeout("changeeye1('images/masthmaster.png')", 1000);
@@ -156,7 +196,7 @@ $("#regpicture").slideUp();
 		
 			
 </head>
-<body onLoad="changeeye(); load();">
+<body onLoad="changeeye(); load(); changefact(); changebluff();">
 
 <div data-role="page" id="mainpage" class="content" style= "background: #000f39;">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
@@ -285,11 +325,11 @@ $("#regpicture").slideUp();
 		<tr>
 		<td class="auto-style1">
 		<form method="post" class="auto-style3">
-		<br />
 <table>
 <tr>
 <td>
 		<img src="images/FACT.png"  onClick="factClick()" width="70%" height="10%" id="fact" class="fact" alt="" />
+		
 </td>
 <td>
 		
