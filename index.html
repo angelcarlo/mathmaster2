@@ -19,9 +19,11 @@
 
 background-image: url(images/bg.png); 
 background-repeat: no-repeat;
-margin-top: 40px;
+background-position: fixed;
 background-size:100%; 
 }
+
+
 		</style>		
 		
 	    
@@ -217,7 +219,8 @@ $("#regpicture").slideUp();
 
 
  <img src="images/masthmaster.png" id="img" height="40%" width="70%" />
-
+<br />
+<br />
 <a href="#login" target="_blank" ><img src="images/START.png"   height="20%" width="80%"></a>
 <a href="#register" target="_blank" ><img src="images/HELP.png" id="regpicture"   height="20%" width="80%" ></a>
 </div>
@@ -252,7 +255,7 @@ $("#regpicture").slideUp();
 
 
 
-<div data-role="page" id="login" class="content" style= "background: #f1ab02;">
+<div data-role="page" id="login" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
    <img src="images/header.png" height="100%" width="80%" />
  </div>
@@ -271,7 +274,7 @@ $("#regpicture").slideUp();
 </div>
 
 
-<div data-role="page" id="successfully" class="content" style= "background: #f1ab02;">
+<div data-role="page" id="successfully" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
   <img src="images/header.png" height="100%" width="80%" />
  </div>
@@ -309,7 +312,7 @@ $("#regpicture").slideUp();
 
 
 
-<div data-role="page" id="mathmaster" class="content" style= "background: #f1ab02;">
+<div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a" align="center" data-position="fixed" style="height:10%;">
 
 <table id="tblscore">
@@ -338,11 +341,11 @@ $("#regpicture").slideUp();
 		
 		<br />
 		<br />
-		<form method="post" >
+		<form method="post" align="center" >
 <table>
 <tr>
 <td>
-		<img src="images/FACT.png"  onClick="factClick()" width="70%" height="10%" id="fact" class="fact" alt="" />	
+<img src="images/FACT.png"  onClick="factClick()" width="70%" height="10%" id="fact" class="fact" alt="" />	
 </td>
 <td>	
 <img src="images/BLUFF.png"  onClick="bluffClick()" width="70%" height="10%" id="bluff" class="bluff" alt="" />
