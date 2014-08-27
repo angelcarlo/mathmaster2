@@ -19,8 +19,8 @@ header('Access-Control-Allow-Orgin:*');
 mysql_connect("localhost", "root", "")or die("cannot connect server ");
 		mysql_select_db("dbmathmaster")or die("cannot select DB");
 		
-			$sql="SELECT  username, address, score from tbl_score 
-			
+			$sql="SELECT password, username, address, score from tbl_score
+
 			ORDER BY score DESC  ";	
 	
 	
