@@ -143,6 +143,48 @@ $("#regpicture").slideUp();
 		}
 		
 		
+		
+		
+		
+		
+if(!(localStorage.getItem("soundState"))){
+localStorage.setItem("soundState", "");
+}
+
+function loadSound(){
+if(localStorage.getItem("soundState") == "true"){
+document.getElementById('audiobg').muted = localStorage.getItem("soundState");
+document.getElementById("test").src = "images/off.png"
+
+}else if(localStorage.getItem("soundState") == ""){
+document.getElementById('audiobg').muted =  localStorage.getItem("soundState");
+document.getElementById("test").src = "images/on.png"
+var audio = document.getElementById("audiobg");
+audio.play();
+
+}
+}
+
+function sound(){
+if(localStorage.getItem("soundState") == ""){
+mute();
+}else if(localStorage.getItem("soundState") == "true"){
+unmute();
+}
+
+}
+function mute(){
+localStorage.setItem("soundState", "true");
+document.getElementById('audiobg').muted = localStorage.getItem("soundState");
+document.getElementById("test").src = "images/off.png"
+}
+function unmute(){
+localStorage.setItem("soundState", "");
+document.getElementById('audiobg').muted = localStorage.getItem("soundState");
+document.getElementById("test").src = "images/on.png"
+var audio = document.getElementById("audiobg");
+audio.play();
+}
 	
 		</script>
 <style>	
@@ -209,12 +251,16 @@ $("#regpicture").slideUp();
 		
 			
 </head>
-<body onLoad="changeeye(); load(); changefact(); changebluff();">
+
+<body onLoad="changeeye(); load(); changefact(); changebluff(); loadSound();">
+
+<audio loop="loop" id="audiobg">
+	<source src="mathmaster.wav"></source>
+	Your browser isn't invited for super fun audio time.
+</audio>
 
 <div data-role="page" id="mainpage" class="content" style="background-color: #f1ab02;">
-
 <div data-role="content" align="center" >
-
 
  <img src="images/masthmaster.png" id="img" height="40%" width="70%" />
 <br />
@@ -278,10 +324,17 @@ $("#regpicture").slideUp();
 
 <div data-role="page" id="successfully" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
-  <img src="images/header.png" height="100%" width="80%" />
+ 
+
+ <div class="speaker"  ><img id="test" src="" class="ui-btn-left" onclick="sound()" width="20%" height="90%"></div> 
+
+ 
+
+  <img src="images/header.png" height="100%" width="80%"  />
  </div>
 <div data-role="content" align="center" >
  <div > 
+
  <label class="hello">Hi</label> 
  <label id="nameuser" style="text-transform: uppercase"> </label>
  
@@ -376,10 +429,10 @@ $("#regpicture").slideUp();
 			
 			<br />	
 
-			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+
 			<a href ="#successfully" >	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
 
-			
+			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
 	
 
 </form>			
@@ -1593,7 +1646,15 @@ window.localStorage.setItem("totalScore", totalLocal);
 function load()
 {
 
-
+var pw = window.localStorage.getItem("password");
+var a = "";
+if(pw==a){
+$("#regpicture").show();
+}
+else{
+$("#regpicture").hide();
+$("#regpicture").slideUp();
+}
 
 
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("name");
@@ -1722,3 +1783,16 @@ $('#playagain').click(function() {
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
