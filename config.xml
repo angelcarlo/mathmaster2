@@ -15,14 +15,14 @@
 
         <icon src="icon.png" gap:role="default" />
         <preference name="phonegap-version" value="2.5.0" />
-        
+        <feature name="http://api.phonegap.com/1.0/media"/>
+		<feature name="http://api.phonegap.com/1.0/file"/> 
         <access origin="*" subdomains="true" />
         <access uri="*" subdomains="true" />
          <access uri="http://mathmaster.comoj.com/topscore.php" subdomains="true" />
         <feature name="http://api.phonegap.com/1.0/network"/>
         <feature name="InAppBrowser">
-		 <feature name="http://api.phonegap.com/1.0/media"/>
-		<feature name="http://api.phonegap.com/1.0/file"/>  
+	 
     <param name="android-package" value="org.apache.cordova.InAppBrowser" />
         </feature>
         
