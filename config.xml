@@ -14,7 +14,7 @@
         </gap:platforms>
 
         <icon src="icon.png" gap:role="default" />
-        <preference name="phonegap-version" value="3.3.0" />
+        <preference name="phonegap-version" value="2.5.0" />
         
         <access origin="*" subdomains="true" />
         <access uri="*" subdomains="true" />
@@ -22,6 +22,7 @@
         <feature name="http://api.phonegap.com/1.0/network"/>
         <feature name="InAppBrowser">
 		 <feature name="http://api.phonegap.com/1.0/media"/>
+		<feature name="http://api.phonegap.com/1.0/file"/>  
     <param name="android-package" value="org.apache.cordova.InAppBrowser" />
         </feature>
         
