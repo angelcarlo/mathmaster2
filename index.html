@@ -529,7 +529,39 @@ if (questnum==10)
 	else if(ans=="a106"){score=score+1; progress.attr("value", current);}
 	else if(ans=="c106"){score=score+1; progress.attr("value", current);}	
 	else if(ans=="b107"){score=score+1; progress.attr("value", current);}
-	else if(ans=="e107"){score=score+1; progress.attr("value", current);}		
+	else if(ans=="e107"){score=score+1; progress.attr("value", current);}
+	
+	else if(ans=="b108"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e108"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b109"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e109"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b110"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e110"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b111"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e111"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b112"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e112"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b113"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e113"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b114"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e114"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b115"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e115"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b116"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e116"){score=score+1; progress.attr("value", current);}
+	else if(ans=="b117"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e117"){score=score+1; progress.attr("value", current);}
+	
+	else if(ans=="b118"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e118"){score=score+1; progress.attr("value", current);}
+		
+	else if(ans=="b119"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e119"){score=score+1; progress.attr("value", current);}
+
+	else if(ans=="b120"){score=score+1; progress.attr("value", current);}
+	else if(ans=="e120"){score=score+1; progress.attr("value", current);}	
+	
+	
 	else{
 	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
 		window.localStorage.setItem("bluffactScore", mySave);
@@ -696,6 +728,322 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		
 		
+		<!-- next 4 question here-->
+			else if(questnum==4)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "6*6-9=27?";
+    	document.getElementById ("bluff").value = "a108";
+		document.getElementById ("fact").value = "aa108";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "9*6-6=50?";
+    	document.getElementById ("bluff").value = "b108";
+		document.getElementById ("fact").value = "bb108";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "9-6*6=18?";
+    	document.getElementById ("bluff").value = "c108";
+		document.getElementById ("fact").value = "cc108";
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "6-9*7=23?";
+    	document.getElementById ("bluff").value = "e108";
+		document.getElementById ("fact").value = "ee108";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		<!-- next 4 question here-->
+			else if(questnum==5)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "18/2+20=29?";
+    	document.getElementById ("bluff").value = "a110";
+		document.getElementById ("fact").value = "aa110";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "20/2+18=26?";
+    	document.getElementById ("bluff").value = "b110";
+		document.getElementById ("fact").value = "bb110";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "18+20+2=40?";
+    	document.getElementById ("bluff").value = "c110";
+		document.getElementById ("fact").value = "cc110"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "20/2-3=6?";
+    	document.getElementById ("bluff").value = "e110";
+		document.getElementById ("fact").value = "ee110";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		<!-- next 4 question here-->
+			else if(questnum==6)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "6*4*8+9=201?";
+    	document.getElementById ("bluff").value = "a113";
+		document.getElementById ("fact").value = "aa113";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+4+8*6=62?";
+    	document.getElementById ("bluff").value = "b113";
+		document.getElementById ("fact").value = "bb113";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+4+8+6=27?";
+    	document.getElementById ("bluff").value = "c113";
+		document.getElementById ("fact").value = "cc113"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "9+4+7+6=28?";
+    	document.getElementById ("bluff").value = "e113";
+		document.getElementById ("fact").value = "ee113";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		
+				<!-- next 4 question here-->
+			else if(questnum==7)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "5*5*3-55=20?";
+    	document.getElementById ("bluff").value = "a114";
+		document.getElementById ("fact").value = "aa114";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "55-3-5*5=234 ?";
+    	document.getElementById ("bluff").value = "b114";
+		document.getElementById ("fact").value = "bb114";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "55*3-5-5=155?";
+    	document.getElementById ("bluff").value = "c114";
+		document.getElementById ("fact").value = "cc114"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "55-2-5*5=239?";
+    	document.getElementById ("bluff").value = "e114";
+		document.getElementById ("fact").value = "ee114";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+					else if(questnum==8)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "77/7+7+11=36?";
+    	document.getElementById ("bluff").value = "a115";
+		document.getElementById ("fact").value = "aa115";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "11+77+11+7=103?";
+    	document.getElementById ("bluff").value = "b115";
+		document.getElementById ("fact").value = "bb115";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "7+7+7+7=28?";
+    	document.getElementById ("bluff").value = "c115";
+		document.getElementById ("fact").value = "cc115"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "11+11+11+11=43?";
+    	document.getElementById ("bluff").value = "e115";
+		document.getElementById ("fact").value = "ee115";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		
+		else if(questnum==9)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "60/6/2+10=15?";
+    	document.getElementById ("bluff").value = "a119";
+		document.getElementById ("fact").value = "aa119";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "10+10+60+2=81?";
+    	document.getElementById ("bluff").value = "b119";
+		document.getElementById ("fact").value = "bb119";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "10/2+60+10=75?";
+    	document.getElementById ("bluff").value = "c119";
+		document.getElementById ("fact").value = "cc119"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "60/2/10+10=10?";
+    	document.getElementById ("bluff").value = "e119";
+		document.getElementById ("fact").value = "ee119";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		else if(questnum==10)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "53-50*5*2=30?";
+    	document.getElementById ("bluff").value = "a120";
+		document.getElementById ("fact").value = "aa120";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "50*2-53-5=40?";
+    	document.getElementById ("bluff").value = "b120";
+		document.getElementById ("fact").value = "bb120";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "50*5-53-2=195?";
+    	document.getElementById ("bluff").value = "c120";
+		document.getElementById ("fact").value = "cc120"
+    	questnum=3;
+		}
+		
+				else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "53-50-2*5=6?";
+    	document.getElementById ("bluff").value = "e120";
+		document.getElementById ("fact").value = "ee120";
+    	questnum=3;
+		}
+		
+		}
+		
+		
+		
+		
+		
+		
 		
 		
 }
@@ -738,6 +1086,34 @@ if (questnum==10)
 	else if(ans=="bb106"){score=score+1; progress.attr("value", current);}
 	else if(ans=="aa107"){score=score+1; progress.attr("value", current);}
 	else if(ans=="cc107"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa108"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc108"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa109"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc109"){score=score+1; progress.attr("value", current);}
+	
+
+	else if(ans=="aa110"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc110"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa111"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc111"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa112"){score=score+1; progress.attr("value", current);}
+	else if(ans=="c112"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa113"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc113"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa114"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc114"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa115"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc115"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa116"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc116"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa117"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc117"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa118"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc118"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa119"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc119"){score=score+1; progress.attr("value", current);}
+	else if(ans=="aa120"){score=score+1; progress.attr("value", current);}
+	else if(ans=="cc120"){score=score+1; progress.attr("value", current);}
 	else{
 	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
 		window.localStorage.setItem("bluffactScore", mySave);
@@ -896,7 +1272,12 @@ window.localStorage.setItem("totalScore", totalLocal);
 		
 		
 		
-							else if(questnum==4)
+		
+		
+		
+		
+		
+		else if(questnum==4)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
 	var randomNum=Math.floor((Math.random()*4)+0);
@@ -937,6 +1318,273 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		
 		
+		
+		
+		
+		
+							else if(questnum==5)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "10+15*2=23?";
+    	document.getElementById ("bluff").value = "a109";
+		document.getElementById ("fact").value = "aa109";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "10+15+2=26?";
+    	document.getElementById ("bluff").value = "b109";
+		document.getElementById ("fact").value = "bb109";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "10*2+15=35?";
+    	document.getElementById ("bluff").value = "c109";
+		document.getElementById ("fact").value = "cc109";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "10*3-13=27?";
+    	document.getElementById ("bluff").value = "e109";
+		document.getElementById ("fact").value = "ee109";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+		
+		
+		else if(questnum==6)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "36/3/2=6?";
+    	document.getElementById ("bluff").value = "a111";
+		document.getElementById ("fact").value = "aa111";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "3*36/2=54?";
+    	document.getElementById ("bluff").value = "b111";
+		document.getElementById ("fact").value = "bb111";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "36*2*3=216?";
+    	document.getElementById ("bluff").value = "c111";
+		document.getElementById ("fact").value = "cc111";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "2*36/2=37?";
+    	document.getElementById ("bluff").value = "e111";
+		document.getElementById ("fact").value = "ee111";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+		
+			
+		else if(questnum==7)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "69-3*2=132?";
+    	document.getElementById ("bluff").value = "a112";
+		document.getElementById ("fact").value = "aa112";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "69+2+3=73?";
+    	document.getElementById ("bluff").value = "b112";
+		document.getElementById ("fact").value = "bb112";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "69*2-3=135?";
+    	document.getElementById ("bluff").value = "c112";
+		document.getElementById ("fact").value = "cc112";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "69-68+68=68?";
+    	document.getElementById ("bluff").value = "e112";
+		document.getElementById ("fact").value = "ee112";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+		
+		
+			else if(questnum==8)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "14+6+4*6=144?";
+    	document.getElementById ("bluff").value = "a116";
+		document.getElementById ("fact").value = "aa116";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "14+4+6+6=29?";
+    	document.getElementById ("bluff").value = "b116";
+		document.getElementById ("fact").value = "bb116";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "14*4+6+6=68?";
+    	document.getElementById ("bluff").value = "c116";
+		document.getElementById ("fact").value = "cc116";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "14+3+6+6=32?";
+    	document.getElementById ("bluff").value = "e116";
+		document.getElementById ("fact").value = "ee116";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+		
+		
+		
+		else if(questnum==9)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "15+15+6-9=27?";
+    	document.getElementById ("bluff").value = "a117";
+		document.getElementById ("fact").value = "aa117";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "15-9-6+15=13?";
+    	document.getElementById ("bluff").value = "b117";
+		document.getElementById ("fact").value = "bb117";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "15+15+9+6=45?";
+    	document.getElementById ("bluff").value = "c117";
+		document.getElementById ("fact").value = "cc117";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "15+15+15+15=50?";
+    	document.getElementById ("bluff").value = "e117";
+		document.getElementById ("fact").value = "ee117";
+    	questnum=3;
+		}
+		}
+		
+		
+		
+		
+		
+			else if(questnum==10)
+	{
+	var tobecondition =['q1','q2','q3','q4'];
+	var randomNum=Math.floor((Math.random()*4)+0);
+    $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
+    
+
+
+		if (tobecondition[randomNum]=='q1')
+    	{
+    	document.getElementById ("ask").innerHTML = "43*2+5+1=92?";
+    	document.getElementById ("bluff").value = "a118";
+		document.getElementById ("fact").value = "aa118";
+    	questnum=3;
+    	}
+    	else if (tobecondition[randomNum]=='q2')
+    	{
+    	document.getElementById ("ask").innerHTML = "43+2+5*1=47?";
+    	document.getElementById ("bluff").value = "b118";
+		document.getElementById ("fact").value = "bb118";
+    	questnum=3;
+		}
+		
+		else if (tobecondition[randomNum]=='q3')
+    	{
+    	document.getElementById ("ask").innerHTML = "43+5*2*1=96?";
+    	document.getElementById ("bluff").value = "c118";
+		document.getElementById ("fact").value = "cc118";
+    	questnum=3;
+		}
+		
+			else if (tobecondition[randomNum]=='q4')
+    	{
+    	document.getElementById ("ask").innerHTML = "43+5+2+1=50?";
+    	document.getElementById ("bluff").value = "e118";
+		document.getElementById ("fact").value = "ee118";
+    	questnum=3;
+		}
+		}
+		
+		
+		
 }
 
 
@@ -944,6 +1592,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 
 function load()
 {
+
 
 
 
@@ -1073,16 +1722,3 @@ $('#playagain').click(function() {
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
