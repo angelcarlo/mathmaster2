@@ -1,4 +1,4 @@
-
+<!--hi developer we used jquery, html5, javascript, css and actually, we owned the graphics. thank you :) -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +12,7 @@
 		<script src="themes/2.js"></script>
 		<script src="jquery-1.4.4.min.js" type="text/javascript"></script>
 		<script src="js/jquery.js"></script>
-		
+	<!--css of bg -->	
 		<style>
 #mainpage
 {
@@ -26,7 +26,7 @@ background-size:100%;
 
 		</style>		
 		
-	    
+<!--This is the script for animation right/fact answer button-->
 <script>
 function changefact(){
 	setTimeout("changefact1('images/FACT1.png')", 750);
@@ -42,9 +42,9 @@ document.getElementById('fact').src = val;
 function changefact2(){
 setTimeout("changefact()", 1000);
 }
+<!-- end of animation-->
 
-
-
+<!--This is the script  for animation wrong/bluff answer button-->
 function changebluff(){
 	setTimeout("changebluff1('images/BLUFF.png')", 750);
 	setTimeout("changebluff1('images/BLUFF1.png')", 900);
@@ -60,13 +60,13 @@ function changebluff2(){
 setTimeout("changebluff()", 900);
 }
 
+<!--end of animation-->
 
 
 
 
 
-
-
+<!-- animation for mathmaster avatar-->
 function changeeye(){
 	setTimeout("changeeye1('images/mathmaster1.png')", 750);
 	setTimeout("changeeye1('images/masthmaster.png')", 1000);
@@ -82,15 +82,11 @@ function changeeye2(){
 setTimeout("changeeye()", 1000);
 }
 </script>
-
+<!--end of avatar animation -->
 		
 		
-		
+	<!--This is the script for login which the username and password get data from the localstorage -->	
 		<script>
-
-	
-	
-	
 	function login(){
 var pw = window.localStorage.getItem("password");
 var a = "";
@@ -118,8 +114,8 @@ $("#regpicture").slideUp();
 	
 	
 	}
-		
-		
+		<!--end of login script -->
+<!--script for registration that data is stored to the localstorage -->		
 		function reg(){
 		var con =  document.getElementById('conf').value;
 		var user = document.getElementById('username').value;
@@ -142,8 +138,11 @@ $("#regpicture").slideUp();
 		}
 		}
 		
-		
+<!--end of registration script>		
 	
+	
+	
+	<!--CCS-->
 		</script>
 <style>	
 	.hello {
@@ -206,11 +205,13 @@ $("#regpicture").slideUp();
 	color: white;
 }
 </style>			
-		
+		<!--end of CCS-->	
 			
 </head>
-<body onLoad="changeeye(); load(); changefact(); changebluff();">
 
+<!-- this the codes of the ui -->
+<body onLoad="changeeye(); load(); changefact(); changebluff();">
+<!--first page that shows the login and registration button -->
 <div data-role="page" id="mainpage" class="content" style="background-color: #f1ab02;">
 
 <div data-role="content" align="center" >
@@ -228,8 +229,8 @@ $("#regpicture").slideUp();
 </div>
 </div>
 
-
-
+<!--end-->
+<!-- the ui part of the registration-->
 <div data-role="page" id="register" class="content" style= "background: #f1ab02;">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
  <img src="images/header.png" height="100%" width="80%" />
@@ -254,9 +255,9 @@ $("#regpicture").slideUp();
 </form>
 </div>	
 </div>
+<!-- end -->
 
-
-
+<!-- the ui part of the login-->
 <div data-role="page" id="login" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
    <img src="images/header.png" height="100%" width="80%" />
@@ -274,8 +275,8 @@ $("#regpicture").slideUp();
 </form>
 </div>
 </div>
-
-
+<!-- end of login ui -->
+<!-- the ui part of the main menu-->
 <div data-role="page" id="successfully" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
   <img src="images/header.png" height="100%" width="80%" />
@@ -301,19 +302,14 @@ $("#regpicture").slideUp();
 <a href="#mathmaster" target="_blank" ><img src="images/play.png"  id="play" height="20%" width="75%"></a> <br />
 <a href="#register" target="_blank" ><img src="images/setting.png"  height="20%" width="75%"></a><br />
 <a href="#mainpage" target="_blank" ><img src="images/logout.png"    height="20%" width="75%"></a><br />
-
-
-
-
-
 </div>
 </div>
+<!--end of ui menu -->
 
 
 
 
-
-
+<!-- the ui part of the game-->
 <div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a" align="center" data-position="fixed" style="height:10%;">
 
@@ -387,12 +383,12 @@ $("#regpicture").slideUp();
 			
 			
 </div>	
-
+<!-- end of the ui game-->
 </body>
 
 
 
-
+<!-- the ccs of the font -->
 <style type="text/css">
 
 
@@ -439,7 +435,7 @@ $("#regpicture").slideUp();
 
 
 
-
+<!-- css of the progress bar- awesomeness progress bar :)-->
 #myProgress {
 	width: 100%;
 	height: 40px;
@@ -482,22 +478,29 @@ $("#regpicture").slideUp();
 
 </style>
 
+
+
+<!-- yeah this the script of the game.  -->
 <script type="text/javascript" >
 var questnum = 1;
 var ans;
 var score = 0;
 var life = 0;
 
+
+<!--this function hide the two buttons for wrong/bluff and right/fact -->
 function load(){
-
-
 document.getElementById ('bluff').hidden = true;
 document.getElementById ('fact').hidden = true;
-
-
 }
+<!--end-->
 
+
+
+<!-- this function  is the wrong/bluff button where you could see here the script of the bluff button.  -->
 function bluffClick(){
+
+
 
 if (questnum==10)
 	{
@@ -511,7 +514,7 @@ if (questnum==10)
 	max = progress.attr("max");
 	var current = progress.attr("value");
 	current = 0;
-	
+<!-- this is the condition of the value where those value are correct and  that every value has a 1 point  -->	
 	if(ans=="ee101"){score=score+1; progress.attr("value", current);}
 	else if(ans=="bb2"){score=score+1; progress.attr("value", current);}
 	else if(ans=="a101"){score=score+1; progress.attr("value", current);}
@@ -561,8 +564,10 @@ if (questnum==10)
 	else if(ans=="b120"){score=score+1; progress.attr("value", current);}
 	else if(ans=="e120"){score=score+1; progress.attr("value", current);}	
 	
-	
+	<!-- this is the else part where value are not found on the if and else if statement. -->
 	else{
+	
+	<!-- this is where the score save into the localstorage  -->
 	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
 		window.localStorage.setItem("bluffactScore", mySave);
 		window.localStorage.setItem("fafa", mySave);
@@ -634,7 +639,7 @@ window.localStorage.setItem("totalScore", totalLocal);
     	questnum=2;
 		}
 		
-			else if (tobecondition[randomNum]=='q3')
+			else if (tobecondition[randomNum]=='q4')
     	{
     	document.getElementById ("ask").innerHTML = "9*4/2=6.5?";
     	document.getElementById ("bluff").value = "e102";
@@ -643,7 +648,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		
 		}
-		<!-- next 3 question here-->
+		<!-- next 4 question here-->
 		else if(questnum==2)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
@@ -685,7 +690,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 		
 		}
 		
-				<!-- next 3 question here-->
+				<!-- next 4 questions here-->
 			else if(questnum==3)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
@@ -728,7 +733,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		
 		
-		<!-- next 4 question here-->
+		<!-- next 4 questions here-->
 			else if(questnum==4)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
@@ -1048,7 +1053,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 		
 }
 
-
+<!--this is the function of the right/fact button  -->
 function factClick(){
 
 
@@ -1270,13 +1275,6 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		}
 		
-		
-		
-		
-		
-		
-		
-		
 		else if(questnum==4)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
@@ -1316,13 +1314,7 @@ window.localStorage.setItem("totalScore", totalLocal);
     	questnum=3;
 		}
 		}
-		
-		
-		
-		
-		
-		
-							else if(questnum==5)
+				else if(questnum==5)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
 	var randomNum=Math.floor((Math.random()*4)+0);
@@ -1361,10 +1353,7 @@ window.localStorage.setItem("totalScore", totalLocal);
     	questnum=3;
 		}
 		}
-		
-		
-		
-		
+			
 		
 		else if(questnum==6)
 	{
@@ -1405,19 +1394,13 @@ window.localStorage.setItem("totalScore", totalLocal);
     	questnum=3;
 		}
 		}
-		
-		
-		
-		
-			
+
 		else if(questnum==7)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
 	var randomNum=Math.floor((Math.random()*4)+0);
     $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
     
-
-
 		if (tobecondition[randomNum]=='q1')
     	{
     	document.getElementById ("ask").innerHTML = "69-3*2=132?";
@@ -1450,10 +1433,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		}
 		
-		
-		
-		
-		
+
 			else if(questnum==8)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
@@ -1494,19 +1474,11 @@ window.localStorage.setItem("totalScore", totalLocal);
 		}
 		}
 		
-		
-		
-		
-		
-		
 		else if(questnum==9)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
 	var randomNum=Math.floor((Math.random()*4)+0);
     $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
-    
-
-
 		if (tobecondition[randomNum]=='q1')
     	{
     	document.getElementById ("ask").innerHTML = "15+15+6-9=27?";
@@ -1538,19 +1510,11 @@ window.localStorage.setItem("totalScore", totalLocal);
     	questnum=3;
 		}
 		}
-		
-		
-		
-		
-		
 			else if(questnum==10)
 	{
 	var tobecondition =['q1','q2','q3','q4'];
 	var randomNum=Math.floor((Math.random()*4)+0);
     $(tobecondition[randomNum]).fadeIn(2500).delay(2000).fadeOut(2000);
-    
-
-
 		if (tobecondition[randomNum]=='q1')
     	{
     	document.getElementById ("ask").innerHTML = "43*2+5+1=92?";
@@ -1581,29 +1545,14 @@ window.localStorage.setItem("totalScore", totalLocal);
 		document.getElementById ("fact").value = "ee118";
     	questnum=3;
 		}
-		}
-		
-		
-		
+		}	
 }
-
-
-
-
+<!-- the onload function where the first part will show when you click the ready button and play button -->
 function load()
 {
-
-
-
-
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("name");
 var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("name");
 var addressuser =  document.getElementById('addressuser').value = window.localStorage.getItem("address");
-
-	
-
-
-
 document.getElementById ('infoscore').hidden = true;	
 document.getElementById ('lblTotal').hidden = true;
 document.getElementById ('lblScore').hidden = true;
@@ -1649,7 +1598,7 @@ document.getElementById('sc1').innerHTML = window.localStorage.getItem("bluffact
     	}
  
 }
-
+<!-- this is the function code of the  progress bar  -- >
 var timer;
 var progress;
 var max;
@@ -1668,7 +1617,7 @@ function updateBar() {
 	current += 3;
 	progress.attr("value", current);
 
-	
+	<!--and this is the condition where the time is over. -->
 	
 	if (current >= max) {
 	var mySave = parseInt(document.getElementById ("sc").innerHTML = score);
@@ -1706,7 +1655,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 	}
 	
 }
-
+<!--this function is for the button play again -->
 $(document).ready(function(){
 $('#playagain').click(function() {
     location.reload();
