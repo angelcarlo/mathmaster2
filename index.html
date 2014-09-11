@@ -399,7 +399,7 @@ $("#regpicture").slideUp();
 			
 			<br />	
 
-			<a href="#mathmaster">	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+			<a >	<img src="" alt=""  id="playagain"  class="auto-style3" width="45%" height="15%"   /></a>
 			<a href ="#successfully">	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
 
 			
@@ -423,7 +423,7 @@ $("#regpicture").slideUp();
 .auto-style2 {
 	text-align: center;
 	font-family: "Century Gothic";
-	font-size: 450%;
+	font-size: 250%;
 	color: white;
 }
 
@@ -1609,8 +1609,6 @@ window.localStorage.setItem("totalScore", totalLocal);
 function load()
 {
 
-document.getElementById ('playagain').hidden = true;
-document.getElementById ('backtomenu').hidden = true;
 
 
 
@@ -1627,8 +1625,11 @@ document.getElementById ('infoscore').hidden = true;
 document.getElementById ('lblTotal').hidden = true;
 document.getElementById ('lblScore').hidden = true;
 document.getElementById ('shareshare').hidden = true;
-
-	
+document.getElementById ('playagain').hidden = true;
+document.getElementById ('backtomenu').hidden = true;
+		document.getElementById ('playagain').src = "images/again.png";
+	document.getElementById ('backtomenu').src = "images/back.png";
+	document.getElementById ('infoscore').innerHTML;
 	var tobecondition =["q1","q2","q3","q4"];
 	var randomNum=Math.floor((Math.random()*4)+0);
 
@@ -1702,7 +1703,7 @@ function updateBar() {
 	$('#infoscore').fadeIn(100);
 	document.getElementById ('playagain').src = "images/again.png";
 	document.getElementById ('backtomenu').src = "images/back.png";
-	document.getElementById ('infoscore').imnerHTML;	
+	document.getElementById ('infoscore').innerHTML;	
 
 
 var totalLocal = document.getElementById('points').innerHTML;
