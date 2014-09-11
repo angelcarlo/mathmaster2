@@ -89,9 +89,7 @@ setTimeout("changeeye()", 1000);
 		
 		<script>
 
-	function refresh(){
-	window.open('index.html#mathmaster');
-	}
+
 	
 	
 	
@@ -336,7 +334,7 @@ $("#regpicture").slideUp();
 
 
 
-<div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bggame.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
+<div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a" align="center" data-position="fixed" style="height:10%;">
 
 <table id="tblscore">
@@ -382,8 +380,8 @@ $("#regpicture").slideUp();
 		</tr>
 </table>
 <form  >
-<div id="allhide">
-			<div id="infoscore" >
+
+			<div id="infoscore" style="display: none;">
 			<h2 class="auto-style1">WHO WILL BE THE MATH MASTER?</h2>
 			<input type="text" id="namenameuser" name="username"	 align="center"		style="text-transform: uppercase;"  disabled ></input>
 			<br />
@@ -392,18 +390,18 @@ $("#regpicture").slideUp();
 			
 			<label>Your Score is: <label>
 			<label id="sc" name="score"  class="auto-style1"></label> <br/>
-			</div>
+		
 			<a href="fafa.html" target="_blank"  > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="15%" width="40%" /></a></br>
-			
+				</div>
 
 			<label  class="auto-style1" >Last Score:</label>	
 			<label id="sc1"  class="auto-style1"></label>
 			
 			<br />	
 
-			<a>	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+			<a href ="#mathmaster">	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
 			<a href ="#successfully">	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
-</div>
+
 			
 	
 
@@ -1617,7 +1615,6 @@ window.localStorage.setItem("totalScore", totalLocal);
 
 function load()
 {
-
 
 
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("username");
