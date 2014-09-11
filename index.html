@@ -382,8 +382,8 @@ $("#regpicture").slideUp();
 		</tr>
 </table>
 <form  >
-
-			<div id="infoscore" style="display: none;">
+<div id="allhide">
+			<div id="infoscore" >
 			<h2 class="auto-style1">WHO WILL BE THE MATH MASTER?</h2>
 			<input type="text" id="namenameuser" name="username"	 align="center"		style="text-transform: uppercase;"  disabled ></input>
 			<br />
@@ -392,7 +392,7 @@ $("#regpicture").slideUp();
 			
 			<label>Your Score is: <label>
 			<label id="sc" name="score"  class="auto-style1"></label> <br/>
-			
+			</div>
 			<a href="fafa.html" target="_blank"  > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="15%" width="40%" /></a></br>
 			
 
@@ -518,7 +518,7 @@ function load(){
 
 document.getElementById ('bluff').hidden = true;
 document.getElementById ('fact').hidden = true;
-
+document.getElementById ('infoscore').hidden = true;	
 
 }
 
@@ -1620,23 +1620,20 @@ function load()
 
 
 
-
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("username");
 var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("username");
 var addressuser =  document.getElementById('addressuser').value = window.localStorage.getItem("address");
 
-
+document.getElementById('points').innerHTML = score;
+document.getElementById('sc1').innerHTML = window.localStorage.getItem("bluffactScore");
 
 
 document.getElementById ('infoscore').hidden = true;	
 document.getElementById ('lblTotal').hidden = true;
 document.getElementById ('lblScore').hidden = true;
 document.getElementById ('shareshare').hidden = true;
-document.getElementById('points').innerHTML = score;
-document.getElementById('sc1').innerHTML = window.localStorage.getItem("bluffactScore");
-
-	document.getElementById ('playagain').hidden = true;
-		document.getElementById ('backtomenu').hidden = true;
+document.getElementById ('playagain').hidden = true;
+document.getElementById ('backtomenu').hidden = true;
 	
 	var tobecondition =["q1","q2","q3","q4"];
 	var randomNum=Math.floor((Math.random()*4)+0);
