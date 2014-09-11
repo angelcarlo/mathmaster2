@@ -5,7 +5,7 @@
 
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>BLUFF | FACT</title>
+		<title>MATH | MASTER</title>
 		<link rel="stylesheet" href="themes/CAP.min.css" />
 		<link rel="stylesheet" href="themes/1.css" />
 		<script src="themes/1.js"></script>
@@ -24,13 +24,14 @@ background-size:100%;
 }
 
 
-		</style>		
+		</style>	
+		
 		
 	    
 <script>
 function changefact(){
-	setTimeout("changefact1('images/FACT1.png')", 750);
-	setTimeout("changefact1('images/FACT.png')", 1000);
+	setTimeout("changefact1('images/FACT.png')", 750);
+	setTimeout("changefact1('images/FACT1.png')", 1000);
 	
 	setTimeout("changefact2()", 750);
 }
@@ -123,18 +124,20 @@ $("#regpicture").slideUp();
 		function reg(){
 		var con =  document.getElementById('conf').value;
 		var user = document.getElementById('username').value;
-		var name  = document.getElementById('name').value;
 		var add  = document.getElementById('address').value;
 		var pass  = document.getElementById('password').value;
 	
 
-		if(con==pass){
+		if(con==pass ){
 		window.localStorage.setItem("username", user);
-		window.localStorage.setItem("name", name);
 		window.localStorage.setItem("address", add);
 		window.localStorage.setItem("password", pass);
-		window.open('index.html');
+		
 		}
+		else if(con==pass){
+		alert('You are now Registered!');
+		}
+		
 		else{
 		
 		alert('Password does not match!');
@@ -143,8 +146,17 @@ $("#regpicture").slideUp();
 		}
 		
 		
+		
+		
+		
+
 	
 		</script>
+		
+		
+		
+		
+		
 <style>	
 	.hello {
 	text-align: center;
@@ -207,9 +219,18 @@ $("#regpicture").slideUp();
 }
 </style>			
 		
-			
+	
+
+
+	
 </head>
-<body onLoad="changeeye(); load(); changefact(); changebluff();">
+
+<body onLoad="changeeye(); load(); changefact(); changebluff(); loadSound();">
+
+<audio loop="loop" id="audiobg">
+	<source src="mathmaster.wav"></source>
+	Your browser isn't invited for super fun audio time.
+</audio>
 
 <div data-role="page" id="mainpage" class="content" style="background-color: #f1ab02;">
 
@@ -236,10 +257,8 @@ $("#regpicture").slideUp();
  </div>
 <div data-role="content"  >
 <form >
-<label class="userstyle">USER</label>
+<label class="userstyle">USERNAME</label>
 <input type="text" name = "username" id="username" placeholder="USERNAME" style="text-transform: uppercase"   required />
-<label class="namestyle">NAME</label>
-<input type="text" name = "name" id="name"  placeholder="LN, FN, MI" style="text-transform: uppercase"   required />
 <label class="addressstyle"  >ADDRESS</label>
 <input type="text" name="address" id="address" placeholder="CITY , COUNTRY" style="text-transform: uppercase"   required  />
 <label class="passwordstyle" >PASSWORD</label>	 
@@ -276,12 +295,14 @@ $("#regpicture").slideUp();
 </div>
 
 
-<div data-role="page" id="successfully" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
+<div data-role="page" id="successfully" class="content" style= "background-image: url(images/bgsuccessfull.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a"  align="center" data-position="fixed" style="height:10%;">
   <img src="images/header.png" height="100%" width="80%" />
  </div>
 <div data-role="content" align="center" >
  <div > 
+
+
  <label class="hello">Hi</label> 
  <label id="nameuser" style="text-transform: uppercase"> </label>
  
@@ -314,7 +335,7 @@ $("#regpicture").slideUp();
 
 
 
-<div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bg2.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
+<div data-role="page" id="mathmaster" class="content" style= "background-image: url(images/bggame.png); background-size:100%; background-repeat: no-repeat; background-color: #f1ab02; ">
  <div data-role="header" data-theme="a" align="center" data-position="fixed" style="height:10%;">
 
 <table id="tblscore">
@@ -336,15 +357,14 @@ $("#regpicture").slideUp();
 <h5 id="lblTotal" class="lblTotal"  > </h5>
 <table id="quest" style="width: 99%; height: 96%; " class="auto-style7">
 		<tr>
-		<h2> <td class="auto-style2" ><label id="ask" > </label></td> </h2>
+		<h2> <td class="auto-style2" ><h1 id="ask" > </h1></td> </h2>
 		</tr>
 		<tr>
 		<td >
 		
-		<br />
-		<br />
-		<form method="post" align="center" >
-<table>
+		
+		<form method="post" align="center"  >
+<table style="margin-top: 10%">
 <tr>
 <td>
 <img src="images/FACT.png"  onClick="factClick()" width="70%" height="10%" id="fact" class="fact" alt="" />	
@@ -376,10 +396,10 @@ $("#regpicture").slideUp();
 			
 			<br />	
 
-			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+
 			<a href ="#successfully" >	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
 
-			
+			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
 	
 
 </form>			
@@ -1595,9 +1615,8 @@ function load()
 
 
 
-
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("name");
-var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("name");
+var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("username");
 var addressuser =  document.getElementById('addressuser').value = window.localStorage.getItem("address");
 
 	
@@ -1722,3 +1741,16 @@ $('#playagain').click(function() {
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
