@@ -89,6 +89,10 @@ setTimeout("changeeye()", 1000);
 		
 		<script>
 
+	function refresh(){
+	window.open('index.html#mathmaster');
+	}
+	
 	
 	
 	
@@ -378,17 +382,19 @@ $("#regpicture").slideUp();
 		</tr>
 </table>
 <form  >
+
 			<div id="infoscore" style="display: none;">
-			<label class="auto-style1">WHO WILL BE THE MATH MASTER?<label>
+			<h2 class="auto-style1">WHO WILL BE THE MATH MASTER?</h2>
 			<input type="text" id="namenameuser" name="username"	 align="center"		style="text-transform: uppercase;"  disabled ></input>
 			<br />
 			<input  type="text" id="addressuser" name="address"  align="center"	  style="text-transform: uppercase;  align: center;"  disabled ></input>
 			<br />
+			
 			<label>Your Score is: <label>
-			<label id="sc" name="score"  class="auto-style1"></label>
-			</div>
-			<a href="fafa.html" target="_blank" style="display: none;" > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="15%" width="40%" /></a></br>
-		
+			<label id="sc" name="score"  class="auto-style1"></label> <br/>
+			
+			<a href="fafa.html" target="_blank"  > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="15%" width="40%" /></a></br>
+			
 
 			<label  class="auto-style1" >Last Score:</label>	
 			<label id="sc1"  class="auto-style1"></label>
@@ -396,8 +402,8 @@ $("#regpicture").slideUp();
 			<br />	
 
 			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
-			<a href ="#successfully" >	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
-
+			<a href ="#successfully">	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
+</div>
 			
 	
 
@@ -1611,6 +1617,7 @@ window.localStorage.setItem("totalScore", totalLocal);
 
 function load()
 {
+
 
 
 
