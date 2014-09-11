@@ -132,12 +132,8 @@ $("#regpicture").slideUp();
 		window.localStorage.setItem("username", user);
 		window.localStorage.setItem("address", add);
 		window.localStorage.setItem("password", pass);
-		
+		window.open('index.html');
 		}
-		else if(con==pass){
-		alert('You are now Registered!');
-		}
-		
 		
 		else{
 		
@@ -397,10 +393,10 @@ $("#regpicture").slideUp();
 			
 			<br />	
 
-
+			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
 			<a href ="#successfully" >	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
 
-			<a href="#mathmaster" >	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+			
 	
 
 </form>			
@@ -589,17 +585,17 @@ if (questnum==10)
 		window.localStorage.setItem("fafa", mySave);
 	clearInterval(timer);
 	document.getElementById("myProgress").hidden=true;
-	$('#bluff').fadeOut(300);
-	$('#fact').fadeOut(300);
-	$('#ask').fadeOut(300);
-	$('#headscore').fadeOut(300);
-	$('#points').fadeOut(300);
+	$('#bluff').fadeOut(100);
+	$('#fact').fadeOut(100);
+	$('#ask').fadeOut(100);
+	$('#headscore').fadeOut(100);
+	$('#points').fadeOut(100);
 	
-	$('#playagain').fadeIn(300);
-	$('#backtomenu').fadeIn(300);
-	$('#sharebtn').fadeIn(300);
-	$('#infoscore').fadeIn(300);
-	$('#shareshare').fadeIn(300);
+	$('#playagain').fadeIn(100);
+	$('#backtomenu').fadeIn(100);
+	$('#sharebtn').fadeIn(100);
+	$('#infoscore').fadeIn(100);
+	$('#shareshare').fadeIn(100);
 	document.getElementById ('playagain').src = "images/again.png";
 	document.getElementById ('backtomenu').src = "images/back.png";
 	
@@ -1141,17 +1137,17 @@ if (questnum==10)
 				window.localStorage.setItem("fafa", mySave);
 	clearInterval(timer);
 	document.getElementById("myProgress").hidden=true;
-	$('#bluff').fadeOut(300);
-	$('#fact').fadeOut(300);
-	$('#ask').fadeOut(300);
-	$('#headscore').fadeOut(300);
-	$('#points').fadeOut(300);
+	$('#bluff').fadeOut(100);
+	$('#fact').fadeOut(100);
+	$('#ask').fadeOut(100);
+	$('#headscore').fadeOut(100);
+	$('#points').fadeOut(100);
 	
-	$('#playagain').fadeIn(300);
-	$('#backtomenu').fadeIn(300);
-	$('#sharebtn').fadeIn(300);
-	$('#infoscore').fadeIn(300);
-	$('#shareshare').fadeIn(300);
+	$('#playagain').fadeIn(100);
+	$('#backtomenu').fadeIn(100);
+	$('#sharebtn').fadeIn(100);
+	$('#infoscore').fadeIn(100);
+	$('#shareshare').fadeIn(100);
 	document.getElementById ('playagain').src = "images/again.png";
 	document.getElementById ('backtomenu').src = "images/back.png";
 	document.getElementById ('infoscore').value;
@@ -1616,6 +1612,7 @@ function load()
 
 
 
+
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("username");
 var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("username");
 var addressuser =  document.getElementById('addressuser').value = window.localStorage.getItem("address");
@@ -1696,15 +1693,15 @@ function updateBar() {
 				window.localStorage.setItem("fafa", mySave);
 	clearInterval(timer);
 	document.getElementById("myProgress").hidden=true;
-	$('#bluff').fadeOut(300);
-	$('#fact').fadeOut(300);
-	$('#ask').fadeOut(300);
-	$('#tblscore').fadeOut(300);
+	$('#bluff').fadeOut(100);
+	$('#fact').fadeOut(100);
+	$('#ask').fadeOut(100);
+	$('#tblscore').fadeOut(100);
 		
-	$('#playagain').fadeIn(300);
-	$('#backtomenu').fadeIn(300);
-	$('#shareshare').fadeIn(300);
-	$('#infoscore').fadeIn(300);
+	$('#playagain').fadeIn(100);
+	$('#backtomenu').fadeIn(100);
+	$('#shareshare').fadeIn(100);
+	$('#infoscore').fadeIn(100);
 	document.getElementById ('playagain').src = "images/again.png";
 	document.getElementById ('backtomenu').src = "images/back.png";
 	document.getElementById ('infoscore').imnerHTML;	
