@@ -356,7 +356,7 @@ $("#regpicture").slideUp();
 <h5 id="lblTotal" class="lblTotal"  > </h5>
 <table id="quest" style="width: 99%; height: 96%; " class="auto-style7">
 		<tr>
-		<h2> <td class="auto-style2" ><h1 id="ask" > </h1></td> </h2>
+		<h2> <td class="auto-style2" ><label id="ask" > </label></td> </h2>
 		</tr>
 		<tr>
 		<td >
@@ -388,7 +388,7 @@ $("#regpicture").slideUp();
 			<input  type="text" id="addressuser" name="address"  align="center"	  style="text-transform: uppercase;  align: center;"  disabled ></input>
 			<br />
 			
-			<label>Your Score is: <label>
+			<label  class="auto-style1">Your Score is: </label>
 			<label id="sc" name="score"  class="auto-style1"></label> <br/>
 		
 			<a href="fafa.html" target="_blank"  > <img src="images/sharescore.png"  value="TOPSCORE" id="shareshare" height="15%" width="40%" /></a></br>
@@ -399,7 +399,7 @@ $("#regpicture").slideUp();
 			
 			<br />	
 
-			<a href ="#mathmaster">	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
+			<a href="#mathmaster">	<img src="" alt=""  id="playagain" onClick="refresh()" class="auto-style3" width="45%" height="15%"   /></a>
 			<a href ="#successfully">	<img src="" alt=""  id="backtomenu"  value="BACT TO MENU" class="auto-style3" width="45%" height="15%"  /></a>
 
 			
@@ -423,7 +423,7 @@ $("#regpicture").slideUp();
 .auto-style2 {
 	text-align: center;
 	font-family: "Century Gothic";
-	font-size: 150%;
+	font-size: 450%;
 	color: white;
 }
 
@@ -511,14 +511,7 @@ var ans;
 var score = 0;
 var life = 0;
 
-function load(){
 
-
-document.getElementById ('bluff').hidden = true;
-document.getElementById ('fact').hidden = true;
-document.getElementById ('infoscore').hidden = true;	
-
-}
 
 function bluffClick(){
 
@@ -1616,6 +1609,11 @@ window.localStorage.setItem("totalScore", totalLocal);
 function load()
 {
 
+document.getElementById ('playagain').hidden = true;
+document.getElementById ('backtomenu').hidden = true;
+
+
+
 
 var useuse =  document.getElementById('nameuser').innerHTML = window.localStorage.getItem("username");
 var yeah =  document.getElementById('namenameuser').value = window.localStorage.getItem("username");
@@ -1629,8 +1627,7 @@ document.getElementById ('infoscore').hidden = true;
 document.getElementById ('lblTotal').hidden = true;
 document.getElementById ('lblScore').hidden = true;
 document.getElementById ('shareshare').hidden = true;
-document.getElementById ('playagain').hidden = true;
-document.getElementById ('backtomenu').hidden = true;
+
 	
 	var tobecondition =["q1","q2","q3","q4"];
 	var randomNum=Math.floor((Math.random()*4)+0);
